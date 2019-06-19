@@ -1,9 +1,20 @@
-body{
-    background-color: black;
-    color: white;
-}
-#box{
-    background-color: white;
-    color: blue;
-    border: 2px solid brown;
-}
+    body {
+        /*background properties*/
+        background-color: black;
+        color: white;
+    }
+    
+    #box {
+        /*box background properties*/
+        background-color: white;
+        color: blue;
+        border: 2px solid brown;
+        height: 600px;
+        width: 700px;
+        display: block;
+        /*this element allows it to be centered*/
+        margin-left: auto;
+        /*accompany block element for center alignment*/
+        margin-right: auto;
+        /*accompany block element for center alignment*/
+    }

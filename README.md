@@ -37,7 +37,7 @@ https://zukisanante.github.io/Moving-Block/
 > d. Assign rules: HTML CSS JavaScript.
 ---
 ## Done
-> a.
+> a. Box background done.
 ---
 ## Time Spend 19/06/2019
 > - 9u - 10u configuring a new computer 
