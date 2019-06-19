@@ -43,6 +43,11 @@ https://zukisanante.github.io/Moving-Block/
 > - 9u - 10u configuring a new computer 
 > - 11u - 11u40 Watch Laurens
 ---
+## Programming Languages Used
+> - HTML CSS JavaScript (JS)
+---
+> - HTML Canvas (container) element is used to draw graphics in JS.
+---
 ## Licenses
 >
 ---
