@@ -30,6 +30,19 @@ https://zukisanante.github.io/Moving-Block/
 > - HTML 1 hr - CSS 1 hr.
 > - JavaScript - 2 days. (must practice console.log() to track results all the time).
 ---
+## To DO
+> a. Create a box background: HTML CSS.
+> b. Create Food eater: HTML CSS JavaScript.
+> c. Create Food: HTML CSS JavaScript.
+> d. Assign rules: HTML CSS JavaScript.
+---
+## Done
+> a.
+---
+## Time Spend 19/06/2019
+> - 9u - 10u configuring a new computer 
+> - 11u - 11u40 Watch Laurens
+---
 ## Licenses
 >
 ---
