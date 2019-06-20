@@ -28,6 +28,7 @@
         background-image: url("/img/Idle__000.png");
         background-repeat: no-repeat;
         background-size: cover;
+        z-index: 1;
     }
     
     #enemy {
@@ -38,6 +39,21 @@
         background-image: url("/img/Run__007.png");
         background-repeat: no-repeat;
         background-size: cover;
+        animation: patrol 3s infinite;
+        animation-direction: alternate;
+        transition: width 1s;
+        z-index: 0;
+        /*animation duration*/
+    }
+    
+    @keyframes patrol {
+        /*determines start & end positions*/
+        from {
+            top: 0px;
+        }
+        to {
+            top: 510px;
+        }
     }
     
     #food {
@@ -51,6 +67,8 @@
         animation: go 5s infinite;
         animation-direction: alternate;
         transition: width 2s;
+        z-index: -0;
+        /*determining the position, eg in front/back*/
         /*animation duration*/
     }
     
