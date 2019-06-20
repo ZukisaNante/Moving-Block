@@ -18,3 +18,12 @@
         margin-right: auto;
         /*accompany block element for center alignment*/
     }
+    
+    #foodHunter {
+        width: 110px;
+        height: 90px;
+        position: absolute;
+        background-image: url("/img/chicken.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
