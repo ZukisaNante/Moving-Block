@@ -1,56 +1,46 @@
 //declaring  variables
 var keys = {}; //storing the codes and current used/pressed keys
-keys.UP = 38;
+/* keys.right= 38;
 keys.DOWN = 40;
 keys.LEFT = 37;
-keys.RIGHT = 39;
+keys.RIGHT = 39; */
+//Declaring variables
+var container = document.getElementById("boxGameArea");
+var foodHunter = document.getElementById("foodHunter");
+var foodHunterLeft = 0;
+var foodHunterUp = 0;
 
-//Store character reference
-var foodHunter = {
-    x: 100,
-    y: 100,
-    speedMultiply: 2,
-    element: document.getElementById('foodHunter'),
-};
+function controlMov(e) { //foodHunter control functions
+    //console.log(e.keyCode);//results testing purposes
+    if (e.keyCode == 38) { //UP
+        foodHunterUp -= 10;
+        foodHunter.style.top = (parseInt(foodHunterUp)) + "px";
+        if (foodHunterUp <= 0) {
+            foodHunterUp += 10; //Stop the object to exceed border container
+        }
 
-//key detection - try it after with eventListener
-document.body.onkeyup = document.body.onkeydown = function(e) {
-    if (e.preventDefault) {
-        e.preventDefault();
-    } else {
-        e.returnValue = false;
     }
-    var kc = e.keyCode || e.which;
-    keys[kc] = e.type == 'keydown';
-};
-/// character movement update
-var moveCharacter = function(dx, dy) {
-    character.x += (dx || 0) * character.speedMultiplier;
-    character.y += (dy || 0) * character.speedMultiplier;
-    character.element.style.left = character.x + 'px';
-    character.element.style.top = character.y + 'px';
-};
+    if (e.keyCode == 40) { //DOWN
+        foodHunterUp += 10;
+        foodHunter.style.top = (parseInt(foodHunterUp)) + "px";
+        if (foodHunterUp >= 500) {
+            foodHunterUp -= 10;
+        }
 
-/// character control
-var detectCharacterMovement = function() {
-    if (keys[keys.LEFT]) {
-        moveCharacter(-1, 0);
     }
-    if (keys[keys.RIGHT]) {
-        moveCharacter(1, 0);
+    if (e.keyCode == 39) { //LEFT
+        foodHunterLeft += 10;
+        foodHunter.style.left = foodHunterLeft + "px";
+        if (foodHunterLeft >= 630) {
+            foodHunterLeft -= 10;
+        }
     }
-    if (keys[keys.UP]) {
-        moveCharacter(0, -1);
+    if (e.keyCode == 37) { //RIGHT
+        foodHunterLeft -= 10;
+        foodHunter.style.left = foodHunterLeft + "px";
+        if (foodHunterLeft <= 0) { //nested if for positioning and to stop it exceeding boxGameArea
+            foodHunterLeft += 10;
+        }
     }
-    if (keys[keys.DOWN]) {
-        moveCharacter(0, 1);
-    }
-};
-
-/// update current position on screen
-moveCharacter();
-
-/// game loop
-setInterval(function() {
-    detectCharacterMovement();
-}, 1000 / 24);
+}
+document.onkeydown = controlMov; // Calling the function when key is pressed
