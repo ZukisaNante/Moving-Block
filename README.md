@@ -46,7 +46,7 @@ https://zukisanante.github.io/Moving-Block/
 ## Programming Languages Used
 > - HTML CSS JavaScript (JS)
 ---
-> - HTML Canvas (container) element is used to draw graphics in JS.
+> - HTML Canvas (container) element was used to draw graphics in JS but was not advised to use it for this pfroject by the coach.
 ---
 ## Licenses
 >
